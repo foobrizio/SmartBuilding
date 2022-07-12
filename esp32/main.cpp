@@ -37,12 +37,9 @@ const int floor_apartment = 1;
 const int deviceID = 0;
 
 //Dati per la connessione WiFi
-const char* ssid = "Covid 5G Diffusion";
+const char* ssid = "";
 //const char* ssid = "";
-const char* pass = "Redibanez1";
-
-//const char* ssid= "dlink-8D53";
-//const char* pass= "Nuvola&Penny_53";
+const char* pass = "";
 
 
 
