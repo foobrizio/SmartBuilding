@@ -4,6 +4,6 @@ Repository for an interactive multiuser IoT prototype for controlling air condit
 The repository contains:
 
 - End device configuration (ESP32 board)
-- Edge layer configuration (Raspberry PI4 master-slave architecture, communicating through Node-RED flows. Interactive Telegram bot integration)
-- Edge intelligence (Tensorflow application to build a network and predict temperature and humidity value from a given dataset)
+- Node-RED (Configuration of a Raspberry PI4 master-slave architecture through Node-RED flows. Interactive Telegram bot implementation)
+- Edge intelligence (Tensorflow application to build a recurrent neural network and to predict temperature and humidity values from a given dataset)
 - Edge Cloud Sim (Simulation of the architecture and comparisons on EdgeCloud, OnlyEdge and OnlyCloud proposal)
