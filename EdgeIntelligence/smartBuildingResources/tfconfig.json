@@ -1,0 +1,6 @@
+{
+    "epochs": 1,
+    "neuronsLayer1": 10,
+    "neuronsLayer2": 10,
+    "trainingExecution": false
+}
