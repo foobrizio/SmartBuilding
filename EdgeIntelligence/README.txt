@@ -2,7 +2,7 @@ INSTRUCTION TO SET UP THE VIRTUAL ENVIRONMENT
 - If you want, you can download the virtual environment at the following link. After you unzip it, simply move the folder inside the project directory -> https://drive.google.com/file/d/1oOQx5Qrgy-gnCvDaNnXFnIKr6jMwe0Vn/view?usp=sharing
 - Otherwise, you can create a virtual environment by yourself and install inside it all the library in the requiremenst by running the following command once you activate your virtual environment -> pip install -r requirements.txt
 
-###### PLEASE NOT THAT THE PYTHON VERSION OFFICIALLY SUPPORTED IS THE 3.7: OTHER VERSIONS COULD MAKE ARISE ERRORS AND CONFLICTS BETWEEN THE LIBRARIES INSTALLED ######
+###### PLEASE NOTE THAT THE PYTHON VERSION OFFICIALLY SUPPORTED IS THE 3.7: OTHER VERSIONS COULD MAKE ARISE ERRORS AND CONFLICTS BETWEEN THE LIBRARIES INSTALLED ######
 
 
 
