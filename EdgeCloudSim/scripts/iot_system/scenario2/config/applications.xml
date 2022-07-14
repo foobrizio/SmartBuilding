@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<applications>
+	<application name="PREDICTION_PARAMETERS_TASK">
+		<usage_percentage>65</usage_percentage>
+		<prob_cloud_selection>100</prob_cloud_selection>
+		<poisson_interarrival>65</poisson_interarrival>
+		<delay_sensitivity>0</delay_sensitivity>
+		<active_period>25</active_period> 
+		<idle_period>5000</idle_period>
+		<data_upload>0.5</data_upload>
+		<data_download>0.01</data_download>
+		<task_length>608</task_length> 
+		<required_core>1</required_core>
+		<vm_utilization_on_edge>0</vm_utilization_on_edge>
+		<vm_utilization_on_cloud>10</vm_utilization_on_cloud>
+		<vm_utilization_on_mobile>0</vm_utilization_on_mobile>
+	</application>
+	<application name="FORWARDING_TEMPERATURE_AND_HUMIDITY_VALUES">
+		<usage_percentage>20</usage_percentage>
+		<prob_cloud_selection>100</prob_cloud_selection>
+		<poisson_interarrival>5</poisson_interarrival>
+		<delay_sensitivity>0</delay_sensitivity>
+		<active_period>3</active_period>
+		<idle_period>600</idle_period>
+		<data_upload>3</data_upload>
+		<data_download>10</data_download>
+		<task_length>5067</task_length>
+		<required_core>1</required_core>
+		<vm_utilization_on_edge>0</vm_utilization_on_edge>
+		<vm_utilization_on_cloud>5</vm_utilization_on_cloud>
+		<vm_utilization_on_mobile>0</vm_utilization_on_mobile>
+	</application>
+	<application name="ACQUIRING_WEATHER_FORECAST">
+		<usage_percentage>15</usage_percentage>
+		<prob_cloud_selection>100</prob_cloud_selection>
+		<poisson_interarrival>65</poisson_interarrival>
+		<delay_sensitivity>0</delay_sensitivity>
+		<active_period>2</active_period>
+		<idle_period>5000</idle_period>
+		<data_upload>3</data_upload>
+		<data_download>10</data_download>
+		<task_length>7600</task_length>
+		<required_core>1</required_core>
+		<vm_utilization_on_edge>0</vm_utilization_on_edge>
+		<vm_utilization_on_cloud>15</vm_utilization_on_cloud>
+		<vm_utilization_on_mobile>0</vm_utilization_on_mobile>
+	</application>
+</applications>
