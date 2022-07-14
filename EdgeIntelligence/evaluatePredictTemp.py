@@ -1,6 +1,5 @@
 import json
 import os
-import sys
 import traceback
 from sklearn.preprocessing import StandardScaler
 import tensorflow as tf
@@ -49,7 +48,7 @@ def normalizeDataset():
 
 
 def getBestModel():
-    file_path = 'checkpointTemp/*.h5'
+    file_path = 'smartBuildingResources/checkpointTemp/*.h5'
     try:
         files = sorted(glob.iglob(file_path), key=os.path.getctime, reverse=True)
         if(len(files)>=1):
@@ -140,10 +139,10 @@ except Exception as e:
 
 
 try:
-    with open("results.json") as json_input:
+    with open("smartBuildingResources/results.json") as json_input:
         json_object = json.load(json_input)
     json_object["predictedTemperature"] = float(formattedResult)
-    with open('results.json', 'w') as json_output:
+    with open('smartBuildingResources/results.json', 'w') as json_output:
         json.dump(json_object, json_output, indent=4)
 except Exception as e:
         print(traceback.format_exc())

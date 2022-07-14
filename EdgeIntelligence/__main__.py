@@ -3,6 +3,7 @@ import os
 import glob
 import datetime
 import runpy
+import sys
 import traceback
 from paho.mqtt.client import Client
 
@@ -10,7 +11,7 @@ from paho.mqtt.client import Client
 ###################################   DEF   ##############################################
 
 def trainHum():       
-    files = glob.iglob('checkpointHum/*')
+    files = glob.iglob('smartBuildingResources/checkpointHum/*')
     for f in files:
         os.remove(f)
     try:
@@ -22,7 +23,7 @@ def trainHum():
 
 
 def trainTemp():       
-    files = glob.iglob('checkpointTemp/*')
+    files = glob.iglob('smartBuildingResources/checkpointTemp/*')
     for f in files:
         os.remove(f)
     try:
@@ -56,7 +57,7 @@ def predictTemp():
 
 def getResults():
     try:
-        with open("results.json") as json_file:
+        with open("smartBuildingResources/results.json") as json_file:
             json_object=json.load(json_file)
             result=json.dumps(json_object)
             return result
@@ -76,8 +77,7 @@ def sendResults(results):
     try:
         output=client.connect(broker, port)
         print(output)
-        print(results)
-        pub=client.publish(topic, results)
+        pub=client.publish(topic, results, 2)
         print(pub)
 
     except Exception as e:
@@ -108,8 +108,10 @@ def main():
         setTrainingExecution()
     predictHum()
     predictTemp()
-    result=getResults()
-    sendResults(result)
+    results=getResults()
+    sendResults(results)
+    print(results)
+    print("Prediction ended")
     
 
 
@@ -134,3 +136,4 @@ except Exception as e:
 
 if __name__ == "__main__":
     main()
+    sys.exit(0)

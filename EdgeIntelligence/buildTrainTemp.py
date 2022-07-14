@@ -157,7 +157,7 @@ except Exception as e:
 
 try:
     early_stopping = EarlyStopping(monitor='val_loss', patience=15)
-    model_checkpoint = ModelCheckpoint('checkpointTemp/'+'model_temp_{epoch:02d}-{val_loss:.2f}.h5', monitor='val_loss', verbose=0, save_best_only=True, save_weights_only=False, mode='auto')
+    model_checkpoint = ModelCheckpoint('smartBuildingResources/checkpointTemp/'+'model_temp_{epoch:02d}-{val_loss:.2f}.h5', monitor='val_loss', verbose=0, save_best_only=True, save_weights_only=False, mode='auto')
     lr_reducer = ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=10, verbose=0, mode='auto', min_delta=0.0001, cooldown=0, min_lr=0)
 
     print('Training model...')
